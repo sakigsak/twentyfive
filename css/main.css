@@ -1,0 +1,54 @@
+:root {
+    --backgroundColor: #C1F4CE;
+    --backgroundSubColor: #5FA370;
+    --mainColor: #F5DFC1;
+    --subColor: #755C3C;
+    --popupBackgroundColor: #D7C1F5;
+    --popupSubColor: #543C75;
+
+}
+
+.popup{
+    height: 100vh;
+    width: 80vw;
+    background: var(--popupBackgroundColor);
+    position: fixed;
+    top: 0;
+    right: -90vw;
+    transition: right 0.3s;
+    box-shadow: -10px 0px 21px -10px rgba(0,0,0,0.75);
+    z-index: 10;
+}
+
+.popup-button{
+    cursor: pointer;
+    display: inline;
+    position: fixed;
+    top: 0;
+    background-color: dimgray;
+}
+
+.show{
+    right: 0;
+}
+
+.fade-layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 5;
+}
+
+.fade-layer.visible{
+    display: block;
+}
+
+@media screen and (max-width: 412px) {
+    body {
+        
+    }
+}
