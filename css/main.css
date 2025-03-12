@@ -1,3 +1,5 @@
+/* allmänt */
+
 :root {
     --backgroundColor: #C1F4CE;
     --backgroundSubColor: #5FA370;
@@ -5,7 +7,47 @@
     --subColor: #755C3C;
     --popupBackgroundColor: #D7C1F5;
     --popupSubColor: #543C75;
+    --square: url('/img/square.webp')
+}
 
+.wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 14vh 1fr;
+    grid-template-areas: 
+    'popup'
+    'main';
+}
+
+#wantSomeOfThis {
+    grid-area: wantSome;
+}
+
+.imgSlideLoop {
+    grid-area: imgSlide;
+    animation: imgSlideLoop 3s linear infinite;
+    background: var(--square);
+    margin-top: 0;
+    margin-bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 5000px;
+    
+    position: relative;
+}
+
+@keyframes imgSlideLoop {
+    100% { 
+      transform: translateX(-66.6666%);  
+    }
+  }
+
+#winHere {
+    grid-area: winHere;
+}
+
+body {
+    background-color: var(--backgroundColor);
 }
 
 .popup{
@@ -21,11 +63,23 @@
 }
 
 .popup-button{
+    right: 0;
+    
+    grid-area: popup;
     cursor: pointer;
     display: inline;
     position: fixed;
     top: 0;
-    background-color: dimgray;
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 14vh 40vh 1fr;
+    grid-template-areas: 
+    'wantSome'
+    'imgSlide'
+    'winHere';
 }
 
 .show{
@@ -47,8 +101,20 @@
     display: block;
 }
 
+.square {
+    height: 14vh;
+    
+}
+
+/* MOBIL */
+
 @media screen and (max-width: 412px) {
     body {
         
     }
+
+
 }
+
+/* DESKTOP */
+
