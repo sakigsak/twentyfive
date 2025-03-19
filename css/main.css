@@ -13,7 +13,7 @@
 .wrapper {
     display: grid;
     height: 100vh;
-    grid-template-rows: 14vh 1fr;
+    grid-template-rows: 15vh 1fr;
     grid-template-areas: 
     'popup'
     'main';
@@ -25,13 +25,14 @@
 
 .imgSlideLoop {
     grid-area: imgSlide;
-    animation: imgSlideLoop 3s linear infinite;
+    animation: imgSlideLoop 1s linear infinite;
     background: var(--square);
+    background-size: contain;
     margin-top: 0;
     margin-bottom: 0;
     left: 0;
     height: 100%;
-    width: 5000px;
+    width: 100px; /* 400px */
     
     position: relative;
 }
@@ -63,19 +64,21 @@ body {
 }
 
 .popup-button{
-    right: 0;
-    
+    right: 1vw;
+    top: 1vh;
+    height: 10vh;
     grid-area: popup;
     cursor: pointer;
     display: inline;
     position: fixed;
-    top: 0;
 }
 
 .main {
     grid-area: main;
     display: grid;
-    grid-template-rows: 14vh 40vh 1fr;
+    left: 2.5vw;
+    width: 95vw;
+    grid-template-rows: 3vh 30vh 1fr;
     grid-template-areas: 
     'wantSome'
     'imgSlide'
@@ -102,7 +105,7 @@ body {
 }
 
 .square {
-    height: 14vh;
+    height: 100%;
     
 }
 
