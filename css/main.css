@@ -21,20 +21,21 @@
 
 #wantSomeOfThis {
     grid-area: wantSome;
+
 }
 
 .imgSlideLoop {
-    grid-area: imgSlide;
-    animation: imgSlideLoop 1s linear infinite;
+    animation: imgSlideLoop 3s linear infinite;
     background: var(--square);
     background-size: contain;
-    margin-top: 0;
+    margin-top: 18vh;
     margin-bottom: 0;
     left: 0;
-    height: 100%;
-    width: 100px; /* 400px */
-    
-    position: relative;
+    height: 200%;
+    width: 1800px; /* 400px */
+
+
+    position: absolute;
 }
 
 @keyframes imgSlideLoop {
@@ -45,6 +46,7 @@
 
 #winHere {
     grid-area: winHere;
+
 }
 
 body {
@@ -64,7 +66,7 @@ body {
 }
 
 .popup-button{
-    right: 1vw;
+    left: 75vw;
     top: 1vh;
     height: 10vh;
     grid-area: popup;
@@ -78,11 +80,13 @@ body {
     display: grid;
     left: 2.5vw;
     width: 95vw;
-    grid-template-rows: 3vh 30vh 1fr;
+    grid-template-rows: 3vh 35vh 1fr;
     grid-template-areas: 
     'wantSome'
     'imgSlide'
     'winHere';
+    justify-items: center;
+    overflow-y: hidden;
 }
 
 .show{
@@ -90,7 +94,7 @@ body {
 }
 
 .fade-layer{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
